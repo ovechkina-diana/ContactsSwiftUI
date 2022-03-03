@@ -12,7 +12,6 @@ struct ContentView: View {
     let personsInfo = Person.getContactList()
     
     var body: some View {
-        NavigationView {
         TabView {
             ContactsListView(personsInfo: personsInfo)
                 .tabItem {
@@ -22,10 +21,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Numbers", systemImage: "phone")
                 }
-        }.navigationTitle("Contact List")
-
         }
-        
     }
 }
 

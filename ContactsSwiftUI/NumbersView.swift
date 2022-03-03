@@ -11,6 +11,7 @@ struct NumbersView: View {
     let personsInfo: [Person]
     
     var body: some View {
+        NavigationView {
         List(personsInfo) {
             person in
             Section("\(person.fullName)") {
@@ -21,6 +22,7 @@ struct NumbersView: View {
         .listStyle(.plain)
         .navigationTitle("Contact List")
     }
+}
 }
 
 struct NumbersView_Previews: PreviewProvider {
